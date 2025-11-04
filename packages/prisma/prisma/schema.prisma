@@ -13,3 +13,47 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  images    Image[]
+  Jobs      Job[]
+}
+
+model Image {
+  id        Int      @id @default(autoincrement())
+  width     Int
+  height    Int
+  url       String
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  Job       Job[]
+  createdAt DateTime @default(now())
+}
+
+model Job {
+  id        Int       @id @default(autoincrement())
+  type      JobType
+  status    JobStatus @default(PENDING)
+  image     Image     @relation(fields: [imageId], references: [id])
+  imageId   Int
+  createdAt DateTime  @default(now())
+  completedAt DateTime?
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+}
+
+enum JobStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+enum JobType {
+  RESIZE
+  COMPRESS
+}

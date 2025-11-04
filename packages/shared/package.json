@@ -1,0 +1,6 @@
+{
+  "name": "@proc-image/shared",
+  "version": "1.0.0",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.3"
+}

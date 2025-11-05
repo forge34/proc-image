@@ -1,18 +1,26 @@
 {
-  "name": "prisma",
+  "name": "@proc-image/prisma",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -b"
   },
   "devDependencies": {
+    "@types/node": "^24.10.0",
     "prisma": "^6.18.0"
   },
   "dependencies": {
-    "@prisma/client": "^6.18.0"
+    "@prisma/client": "^6.18.0",
+    "dotenv": "^17.2.3"
   }
 }

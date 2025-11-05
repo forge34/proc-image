@@ -6,8 +6,10 @@ import morgan from "morgan";
 import router from "./routes/index";
 import compression from "compression";
 import rateLimit from "express-rate-limit";
+import {prisma} from "@proc-image/prisma";
 
 const app: Express = express();
+
 
 export const corsOptions: CorsOptions = {
   origin: [

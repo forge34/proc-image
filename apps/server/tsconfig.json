@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "types": ["vitest/globals", "node"],
     "allowSyntheticDefaultImports": true,
-    "composite": true
+    "composite": true,
   },
   "include": ["src/**/*", "tests/**/*"]
 }

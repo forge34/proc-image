@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "es6",
-    "noImplicitAny": true,
+    "target": "es2022",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "dist",
-    "skipLibCheck": true,
+    "rootDir": "src",
     "types": ["vitest/globals", "node"],
-    "allowSyntheticDefaultImports": true,
-    "composite": true,
+    "composite": true
   },
   "include": ["src/**/*", "tests/**/*"]
 }

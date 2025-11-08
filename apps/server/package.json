@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test && vitest",
     "start": "node dist/server.js",
     "build": "tsc ",
-    "dev": "NODE_ENV=development && nodemon src/server.ts"
+    "dev": "NODE_ENV=development  nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",

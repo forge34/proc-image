@@ -16,6 +16,8 @@
   "packageManager": "pnpm@10.18.3",
   "dependencies": {
     "@proc-image/prisma": "workspace:*",
+    "@proc-image/shared": "workspace:^",
+    "@proc-image/validators": "workspace:*",
     "bcryptjs": "^3.0.3",
     "bullmq": "^5.63.0",
     "cloudinary": "^2.8.0",
@@ -35,7 +37,8 @@
     "p-limit": "^7.2.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@types/compression": "^1.8.1",

@@ -1,13 +1,21 @@
+import { ImageJob } from "@proc-image/validators";
 import { Worker } from "bullmq";
 import IORedis from "ioredis";
 
 const connection = new IORedis({ maxRetriesPerRequest: null });
 
-const worker = new Worker(
+console.log("Worker starting");
+
+const worker = new Worker<ImageJob>(
   "image-processing",
   async (job) => {
     console.log(`job ${job.id} processed`);
-      },
+    const data = job.data;
+
+    if (data.action == "RESIZE") {
+    } else {
+    }
+  },
   { connection },
 );
 

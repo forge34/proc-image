@@ -24,6 +24,9 @@ importers:
       '@proc-image/shared':
         specifier: workspace:^
         version: link:../../packages/shared
+      '@proc-image/validators':
+        specifier: workspace:*
+        version: link:../../packages/validators
       bcryptjs:
         specifier: ^3.0.3
         version: 3.0.3
@@ -164,6 +167,22 @@ importers:
       '@proc-image/prisma':
         specifier: workspace:^
         version: link:../prisma
+
+  packages/validators:
+    dependencies:
+      '@proc-image/shared':
+        specifier: workspace:*
+        version: link:../shared
+    devDependencies:
+      '@types/express':
+        specifier: ^5.0.5
+        version: 5.0.5
+      '@types/multer':
+        specifier: ^2.0.0
+        version: 2.0.0
+      '@types/node':
+        specifier: ^24.10.0
+        version: 24.10.0
 
 packages:
 
